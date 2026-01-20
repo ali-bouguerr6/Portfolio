@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #tsparticles {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white relative">
+
+  <!-- Particles -->
+  <div id="tsparticles"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      tsParticles.load("tsparticles", {
+        fpsLimit: 60,
+        particles: {
+          number: { value: 90, density: { enable: true, value_area: 800 } },
+          color: { value: "#008CFF" },
+          opacity: { value: 0.5 },
+          size: { value: 3, random: true },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#008CFF",
+            opacity: 0.4,
+            width: 1
+          },
+          move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            resize: true
+          }
+        },
+        retina_detect: true
+      });
+    });
+  </script>
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800/80 backdrop-blur shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-bold text-orange-400">About Me</h1>
+      <ul class="flex space-x-8 text-sm font-medium">
+        <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
+        <li><a href="projects.html" class="hover:text-orange-400">Projects</a></li>
+        <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-24">
+
+    <!-- Title -->
+    <h2 class="text-5xl font-bold mb-16 tracking-wide">
+      Who am I<span class="text-orange-400">?</span>
+    </h2>
+
+    <!-- Content -->
+    <div class="max-w-5xl flex flex-col md:flex-row items-center gap-14">
+
+      <!-- Photo -->
+      <img
+        src="assets/photo massinissa.jpg"
+        alt="Photo of Ali Bouguerra"
+        class="w-52 h-52 rounded-full shadow-xl border-4 border-orange-400/40"
+      >
+
+      <!-- Text -->
+      <div class="text-base leading-relaxed space-y-6 max-w-2xl text-justify">
+
+        <p>
+          I am currently completing my final year of a
+          <strong>Bachelor’s degree in Computer Science</strong> at the
+          University of Paris-Saclay, and I have been admitted to the
+          <strong>Master’s program in Data Science</strong> at the same university.
+        </p>
+
+        <p>
+          Passionate about <strong>data analysis</strong>,
+          <strong>machine learning</strong>, and
+          <strong>data visualization</strong>, I have developed solid skills in
+          <strong>Python</strong>, <strong>SQL</strong>, <strong>Power BI</strong>,
+          and <strong>predictive modeling</strong> through academic projects
+          and a hands-on internship in data science.
+        </p>
+
+        <p>
+          I am currently seeking a
+          <strong>24-month apprenticeship in data</strong>,
+          starting in <strong>September 2025</strong>.
+        </p>
+
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-16 flex flex-col sm:flex-row gap-6">
+      <a
+        href="assets/CV.pdf"
+        download
+        class="bg-blue-500 hover:bg-blue-400 transition text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+      >
+        <i class="fas fa-file-pdf"></i>
+        <span>CV (FR)</span>
+      </a>
+
+      <a
+        href="assets/RESUME.pdf"
+        download
+        class="bg-blue-500 hover:bg-blue-400 transition text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
+      >
+        <i class="fas fa-file-pdf"></i>
+        <span>Resume (EN)</span>
+      </a>
+    </div>
+
+  </section>
+
+</body>
+</html>
