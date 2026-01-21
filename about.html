@@ -3,24 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <title>About Me | Ali Bouguerra</title>
 
   <!-- Libraries -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    #tsparticles {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-    }
+    body { font-family: 'Poppins', sans-serif; }
+    #tsparticles { position: fixed; inset: 0; z-index: -1; }
   </style>
 </head>
 
@@ -35,23 +27,14 @@
         fpsLimit: 60,
         particles: {
           number: { value: 90, density: { enable: true, value_area: 800 } },
-          color: { value: "#008CFF" },
-          opacity: { value: 0.5 },
+          color: { value: "#0ff0fc" },
+          opacity: { value: 0.45 },
           size: { value: 3, random: true },
-          links: {
-            enable: true,
-            distance: 150,
-            color: "#008CFF",
-            opacity: 0.4,
-            width: 1
-          },
+          links: { enable: true, distance: 150, color: "#0ff0fc", opacity: 0.35, width: 1 },
           move: { enable: true, speed: 1 }
         },
         interactivity: {
-          events: {
-            onhover: { enable: true, mode: "grab" },
-            resize: true
-          }
+          events: { onhover: { enable: true, mode: "grab" }, resize: true }
         },
         retina_detect: true
       });
@@ -63,9 +46,9 @@
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <h1 class="text-xl font-bold text-orange-400">About Me</h1>
       <ul class="flex space-x-8 text-sm font-medium">
-        <li><a href="index.html" class="hover:text-orange-400">Home</a></li>
-        <li><a href="projects.html" class="hover:text-orange-400">Projects</a></li>
-        <li><a href="end_page.html" class="hover:text-orange-400">Thank You</a></li>
+        <li><a href="index.html" class="hover:text-orange-400 transition">Home</a></li>
+        <li><a href="projects.html" class="hover:text-orange-400 transition">Projects</a></li>
+        <li><a href="end_page.html" class="hover:text-orange-400 transition">Thank You</a></li>
       </ul>
     </div>
   </nav>
@@ -74,67 +57,68 @@
   <section class="min-h-screen flex flex-col justify-center items-center px-6 pt-32 pb-24">
 
     <!-- Title -->
-    <h2 class="text-5xl font-bold mb-16 tracking-wide">
+    <h2 class="text-5xl font-bold mb-14 tracking-wide text-center">
       Who am I<span class="text-orange-400">?</span>
     </h2>
 
-    <!-- Content -->
-    <div class="max-w-5xl flex flex-col md:flex-row items-center gap-14">
+    <!-- Content Card -->
+    <div class="max-w-5xl w-full bg-gray-800/60 border border-white/10 rounded-2xl shadow-lg p-8 md:p-10">
+      <div class="flex flex-col md:flex-row items-center gap-12">
 
-      <!-- Photo -->
-      <img
-        src="assets/photo massinissa.jpg"
-        alt="Photo of Ali Bouguerra"
-        class="w-52 h-52 rounded-full shadow-xl border-4 border-orange-400/40"
-      >
+        <!-- Photo + Socials -->
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/photo-ali.jpg"
+            alt="Photo of Ali Bouguerra"
+            class="w-52 h-52 rounded-full shadow-xl border-4 border-orange-400/40 object-cover"
+          />
 
-      <!-- Text -->
-      <div class="text-base leading-relaxed space-y-6 max-w-2xl text-justify">
+          <div class="mt-6 flex gap-6">
+            <a href="https://www.linkedin.com/in/ali-bouguerra-7a4b88205/" target="_blank"
+               class="text-orange-400 hover:text-orange-300 transition">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/ali-bouguerr6" target="_blank"
+               class="text-orange-400 hover:text-orange-300 transition">
+              <i class="fab fa-github fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="text-base leading-relaxed space-y-6 max-w-2xl text-justify">
+          <p>
+            I am a <strong>final-year Master’s student in Data Science</strong> at the
+            <strong>University of Strasbourg</strong> and a <strong>Data Scientist apprentice</strong>
+            at <strong>Airbus Defence & Space</strong>.
+          </p>
+
+          <p>
+            I collaborate with two teams — <strong>Sales Operations</strong> and <strong>Digital Teams</strong> —
+            to design data-driven solutions that support decision-making, optimize processes,
+            and deliver actionable insights.
+          </p>
 
         <p>
-          I am currently completing my final year of a
-          <strong>Bachelor’s degree in Computer Science</strong> at the
-          University of Paris-Saclay, and I have been admitted to the
-          <strong>Master’s program in Data Science</strong> at the same university.
+         My main interests include <strong>data analysis</strong>, <strong>machine & deep learning</strong>,
+         <strong>cloud computing</strong>, and <strong>data visualization</strong>.
         </p>
 
         <p>
-          Passionate about <strong>data analysis</strong>,
-          <strong>machine learning</strong>, and
-          <strong>data visualization</strong>, I have developed solid skills in
-          <strong>Python</strong>, <strong>SQL</strong>, <strong>Power BI</strong>,
-          and <strong>predictive modeling</strong> through academic projects
-          and a hands-on internship in data science.
+         I work primarily with <strong>Python</strong>, <strong>SQL</strong>, and <strong>R</strong>,
+         and I regularly use <strong>Power BI</strong> to design dashboards and reporting solutions.
         </p>
 
-        <p>
-          I am currently seeking a
-          <strong>24-month apprenticeship in data</strong>,
-          starting in <strong>September 2025</strong>.
-        </p>
+       <p>
+       I also enjoy exploring modern AI tools and architectures such as
+      <strong>Large Language Models (LLMs)</strong>, <strong>Generative AI</strong>,
+      <strong>Retrieval-Augmented Generation (RAG)</strong>, and <strong>LangChain</strong>
+      to build practical, real-world AI applications.
+      </p>
+
+        </div>
 
       </div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="mt-16 flex flex-col sm:flex-row gap-6">
-      <a
-        href="assets/CV.pdf"
-        download
-        class="bg-blue-500 hover:bg-blue-400 transition text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-      >
-        <i class="fas fa-file-pdf"></i>
-        <span>CV (FR)</span>
-      </a>
-
-      <a
-        href="assets/RESUME.pdf"
-        download
-        class="bg-blue-500 hover:bg-blue-400 transition text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
-      >
-        <i class="fas fa-file-pdf"></i>
-        <span>Resume (EN)</span>
-      </a>
     </div>
 
   </section>
