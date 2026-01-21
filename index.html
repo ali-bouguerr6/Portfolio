@@ -1,101 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ali Bouguerra | Data Science & AI</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali Bouguerra | Portfolio</title>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Open Graph (preview link) -->
+  <meta property="og:title" content="Ali Bouguerra | Portfolio">
+  <meta property="og:description" content="Data Science & AI | Airbus Defence & Space">
+  <meta property="og:image" content="assets/design.png">
+  <meta property="og:type" content="website">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    #tsparticles { position: fixed; inset: 0; z-index: -1; }
+  </style>
 </head>
-<body>
 
-  <!-- Background animation -->
+<body class="bg-gray-900 text-white relative">
+
+  <!-- Particles background -->
   <div id="tsparticles"></div>
 
-  <!-- Navbar -->
-  <nav>
-    <h1>Ali Bouguerra</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      tsParticles.load("tsparticles", {
+        fpsLimit: 60,
+        particles: {
+          number: { value: 90, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ff0fc" },
+          opacity: { value: 0.45 },
+          size: { value: 3, random: true },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#0ff0fc",
+            opacity: 0.35,
+            width: 1
+          },
+          move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+          },
+          modes: {
+            grab: { distance: 140, links: { opacity: 1 } },
+            push: { quantity: 4 }
+          }
+        },
+        retina_detect: true
+      });
+    });
+  </script>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800/80 backdrop-blur shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-bold text-blue-400">My Portfolio</h1>
+      <ul class="flex space-x-8 text-sm font-medium">
+        <li><a href="about.html" class="hover:text-blue-400 transition">About me</a></li>
+        <li><a href="projects.html" class="hover:text-blue-400 transition">Projects</a></li>
+        <li><a href="end_page.html" class="hover:text-orange-400 transition">Thank You</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- Hero -->
-  <section class="hero">
-    <h2>Hello, I’m <span>Ali Bouguerra</span></h2>
-    <p>
-      Student in Data Science & AI, passionate about Artificial Intelligence,
-      Machine Learning, Data Science, and Big Data.  Let’s discover my portfolio ! 
-    </p>
+  <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 pb-20">
+    <div class="max-w-3xl">
+      <h2 class="text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+        Hello, I’m <span class="text-blue-400">Ali Bouguerra</span>
+      </h2>
 
-  
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/ali-bouguerra-7a4b88205/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/ali-bouguerr6" target="_blank">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-  </section>
+      <p class="mt-8 text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-lg">
+        Final-year Master’s student in <strong>Data Science</strong> at the University of Strasbourg
+        and <strong>Data Scientist apprentice</strong> at Airbus Defence & Space.
+      </p>
 
-  <!-- About -->
-  <section id="about">
-    <h3>About Me</h3>
+      <p class="mt-4 text-base md:text-lg text-white/80 leading-relaxed">
+        Passionate about AI and Machine Learning, I build data-driven solutions and explore modern AI tools
+        like <strong>LLMs</strong> and <strong>RAG</strong>.
+      </p>
 
-    <p>
-      I am a final-year Master’s student in Data Science at the University of Strasbourg
-      and a Data Scientist apprentice at Airbus Defence & Space.  I work with two teams, Sales Operations and Digital Teams,
-      where I develop data-driven solutions to support decision-making,  optimize processes, and deliver actionable insights.
-    </p>
-
-    <p>
-      Passionate about data analysis, machine and deep learning, cloud computing,
-      and data visualization, I have developed strong skills in Python, SQL, and R,
-      as well as in Power BI dashboards, AI tools and architectures (LLMs, RAG, LangChain), and predictive modeling through academic projects
-      and a hands-on apprenticeship in data science.
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h3>Projects</h3>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <h4>Machine Learning Project</h4>
-        <p>Development of predictive models using supervised learning techniques.</p>
-        <a href="#">View project</a>
+      <!-- CTA -->
+      <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="projects.html"
+           class="bg-blue-500 hover:bg-blue-400 transition text-gray-900 font-semibold px-8 py-3 rounded-lg">
+          View Projects
+        </a>
+        <a href="about.html"
+           class="border border-white/30 hover:border-white/60 hover:bg-white/5 transition text-white font-semibold px-8 py-3 rounded-lg">
+          About Me
+        </a>
       </div>
 
-      <div class="project-card">
-        <h4>Data Analysis Project</h4>
-        <p>Exploratory data analysis and visualization to extract insights.</p>
-        <a href="#">View project</a>
-      </div>
-
-      <div class="project-card">
-        <h4>AI / LLM Project</h4>
-        <p>Implementation of LLM-based solutions using RAG and LangChain.</p>
-        <a href="#">View project</a>
+      <!-- Socials -->
+      <div class="mt-12 flex justify-center gap-8">
+        <a href="https://www.linkedin.com/in/ali-bouguerra-7a4b88205/" target="_blank"
+           class="text-orange-400 hover:text-orange-300 transition">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/ali-bouguerr6" target="_blank"
+           class="text-orange-400 hover:text-orange-300 transition">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>📧 alibouguerra38gemail.com</p>
-  </section>
-
-  <!-- tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
