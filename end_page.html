@@ -2,23 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thank You</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Ali Bouguerra</title>
+
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.7.1/tsparticles.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    #tsparticles { position: fixed; inset: 0; z-index: -1; }
+  </style>
 </head>
 
-<body>
+<body class="bg-gray-900 text-white relative">
 
-  <section class="thank-you">
-    <h1>Thank you for your time</h1>
-    <p>
-      Thank you for taking the time to explore my work. If you have any questions, feel free to get in touch.
-    </p>
+  <!-- Particles background -->
+  <div id="tsparticles"></div>
 
-    <a href="index.html" class="btn btn-primary">
-      🏠 Back to Portfolio
-    </a>
-  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      tsParticles.load("tsparticles", {
+        fpsLimit: 60,
+        particles: {
+          number: { value: 90, density: { enable: true, value_area: 800 } },
+          color: { value: "#0ff0fc" },
+          opacity: { value: 0.45 },
+          size: { value: 3, random: true },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#0ff0fc",
+            opacity: 0.35,
+            width: 1
+          },
+          move: { enable: true, speed: 1 }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+          },
+          modes: {
+            grab: { distance: 140, links: { opacity: 1 } },
+            push: { quantity: 4 }
+          }
+        },
+        retina_detect: true
+      });
+    });
+  </script>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800/80 backdrop-blur shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-bold text-blue-400">My Portfolio</h1>
+      <ul class="flex space-x-8 text-sm font-medium">
+        <li><a href="about.html" class="hover:text-blue-400 transition">About me</a></li>
+        <li><a href="projects.html" class="hover:text-blue-400 transition">Projects</a></li>
+        <li><a href="end_page.html" class="hover:text-orange-400 transition">Thank You</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Thank You -->
+  <main class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-28 pb-20">
+    <div class="max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg text-orange-400">
+        Thank you for your time
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-white/90 leading-relaxed">
+        Thank you for taking the time to explore my work. If you have any questions, feel free to get in touch.
+      </p>
+
+      <div class="mt-10 flex justify-center">
+        <a href="index.html"
+           class="bg-blue-500 hover:bg-blue-400 transition text-gray-900 font-semibold px-8 py-3 rounded-lg">
+          🏠 Back to Portfolio
+        </a>
+      </div>
+
+      <div class="mt-10 flex justify-center gap-8">
+        <a href="https://www.linkedin.com/in/ali-bouguerra-7a4b88205/" target="_blank"
+           class="text-orange-400 hover:text-orange-300 transition" aria-label="LinkedIn">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/ali-bouguerr6" target="_blank"
+           class="text-orange-400 hover:text-orange-300 transition" aria-label="GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </main>
 
 </body>
 </html>
+
 
